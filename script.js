@@ -1,16 +1,11 @@
-console.log("Sean's website loaded.");
+console.log("Sean Feiertag's portfolio loaded.");
 
-// Toggle mobile menu
+// Mobile menu toggle
 const toggle = document.getElementById('menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const nav = document.getElementById('nav-links');
+toggle.addEventListener('click', () => nav.classList.toggle('active'));
 
-toggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-
-// Auto-close on link click
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-  });
+// Close menu when a link is clicked
+nav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => nav.classList.remove('active'));
 });
