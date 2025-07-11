@@ -2,43 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sean Feiertag</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sean Feiertag – Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
   <header class="navbar">
     <div class="logo">Sean Feiertag</div>
-    <nav id="nav-menu">
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
   </header>
 
   <main>
-    <section id="hero">
-      <h1>Hello, I'm Sean.</h1>
+    <section id="hero" class="hero">
+      <h1>Hi, I'm Sean Feiertag.</h1>
       <p>Electrical Engineering student. Thinker. Builder. Explorer.</p>
     </section>
 
-    <section id="about">
+    <section id="about" class="section">
       <h2>About Me</h2>
-      <p>I'm Sean, an Electrical Engineering student passionate about innovation and solving real-world problems using technology. I enjoy exploring circuit design, embedded systems, and working on creative engineering projects.</p>
+      <p>I'm passionate about innovation, circuit design, embedded systems, and creating real-world solutions.</p>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="section">
       <h2>Projects</h2>
-      <p>Here you'll soon find highlights of my hands-on work—from class assignments to personal prototypes and collaborations. Stay tuned!</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Project One</h3>
+          <p>Brief description of a standout project. <a href="#">Learn more →</a></p>
+        </div>
+        <div class="project-card">
+          <h3>Project Two</h3>
+          <p>Another cool project summary. <a href="#">Learn more →</a></p>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="section">
       <h2>Contact</h2>
-      <p>Want to connect? Reach out on GitHub, LinkedIn, or email me directly.</p>
+      <p>Connect with me via <a href="#">GitHub</a>, <a href="#">LinkedIn</a>, or email me: <a href="mailto:you@example.com">you@example.com</a>.</p>
     </section>
   </main>
 
