@@ -60,17 +60,20 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    display: none; /* Hidden until toggled */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
   }
 
   nav ul.active {
-    display: flex;
+    max-height: 300px; /* Adjust if needed for more links */
   }
 
   .menu-toggle {
     display: block;
   }
 }
+
 
 /* Main content */
 main {
