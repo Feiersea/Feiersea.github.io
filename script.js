@@ -1,8 +1,17 @@
-// Simple message to show the script is working
+// Welcome message
 console.log("Welcome to Sean's Website!");
 
-// Toggle the navigation menu when the hamburger icon is clicked
-document.getElementById('menu-toggle').addEventListener('click', function () {
-  const menu = document.getElementById('nav-menu').querySelector('ul');
-  menu.classList.toggle('active');
+// Toggle the navigation menu
+const toggleButton = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu').querySelector('ul');
+
+toggleButton.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+// Close the menu when a link is clicked (on small screens)
+navMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
 });
