@@ -1,17 +1,16 @@
-// Welcome message
-console.log("Welcome to Sean's Website!");
+console.log("Sean's website loaded.");
 
-// Toggle the navigation menu
-const toggleButton = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu').querySelector('ul');
+// Toggle mobile menu
+const toggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-toggleButton.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
 
-// Close the menu when a link is clicked (on small screens)
-navMenu.querySelectorAll('a').forEach(link => {
+// Auto-close on link click
+document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    navMenu.classList.remove('active');
+    navLinks.classList.remove('active');
   });
 });
